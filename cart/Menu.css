@@ -1,0 +1,380 @@
+*{
+	margin: 0;
+	padding: 0;
+	color:#fff ;
+	box-sizing: border-box;
+	font-family: 'poppins' ,san-serif ,courier,arial,helvetica;
+
+}
+/*navigation bar*/
+
+nav{
+ 
+ background-color: gray;
+  background-color: rgba(0, 0, 0, 0.296);
+}
+nav:after{
+	content: '';
+	clear: both;
+	display: table;
+  font-size: 20px;
+
+}
+nav ul{
+	float: center;
+	list-style: none;
+	position: relative;
+	text-align: center;
+
+}
+nav ul li{
+	float: center;
+	display: inline-block;
+	margin: 0 1px;
+
+
+}
+nav ul li a{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	line-height: 70px;
+	font-size: 20px;
+	padding: 3px 15px;
+	position: center;
+
+}
+nav ul li a:hover{
+	color: black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px coral,
+	            0 0 5px coral;
+
+}
+
+
+      
+
+.header-container{
+    margin-left: auto;
+    margin-right: auto;
+    width : auto;
+}
+
+.header{
+  background-color: coral;
+  height: 100px;
+    
+}
+.header img{
+  float: left;
+  width: 100px;
+  height: 100px
+
+ /* <h1 id="logo"><img src="images/pizzaMtransparent.png"  alt="Piazza Maestro"> Pizza Maestro</a></h1>*/
+}
+.header h1{
+  
+  display: inline;
+  font-family: "italicize,arial";
+  position: relative;
+  top: 34px;
+  }
+
+ 
+
+
+
+/*our services*/
+#services{
+  width:99%;
+  margin:0% 1% 1% 0%;
+  
+  border-radius:;
+  -noz-border-radius:;
+  -webkit-border-radius:;
+  padding-top: 100px;
+}
+
+
+h2#label_services-1{
+  text-align:left;
+  color: white;
+  font-size: 50px;
+  font-family: 'Dimbo Regular';
+    font-weight: 800;
+  font-stretch:expanded;
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+h3#label_services-1{
+  text-align:center;
+  color: coral;
+  font-size: 17px;
+  font-family: 'Dimbo Regular';
+    font-weight: 800;
+  font-stretch:expanded;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+h3#label_services-2{
+  text-align:center;
+  color: coral;
+  font-size: 17px;
+  font-family: 'Dimbo Regular';
+    font-weight: 800;
+  font-stretch:expanded;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+
+p#label_services-1{
+  text-align:left;
+  color: coral;
+  font-size: 17px;
+  font-family: 'Dimbo Regular';
+    font-weight: 800;
+  font-stretch:expanded;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#label_services a{
+  text-decoration:none;
+  margin-top: 10px;
+  color:coral;
+  border-top: 0px solid white;
+  border-bottom:1px solid white;
+  background-color:white;
+  transition:0.5s all;
+  -webkit-transition:0.5s all;
+  -moz-transition:0.5s all;
+  -o-transition:0.5s all;
+  -ms-transition:0.5s all;
+  border-radius:5px;
+  -noz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding:0% 5%;
+
+}
+
+#label_services a:hover{
+  color:#6b3e26;
+  background-color:gray;
+}
+
+#content_services{  
+  color:#fff; /*change when it hovers*/
+  width:100%;
+  border-radius:5px;
+  -noz-border-radius:5px;
+  -webkit-border-radius:5px;
+  
+}
+
+.grid_services{ /*for each service*/
+  width:27%;
+
+  margin: 20px;
+  margin-right: 50px;
+  padding:1%;
+  height:430px; 
+  border-radius:2px;
+  -noz-border-radius:1px;
+  -webkit-border-radius:1px;
+  border:; /*lightblue*/
+  float:left;
+}
+
+.grid_services img{
+  
+  
+  width:343px ;
+  height:250px;
+  padding: 0px;
+margin-bottom: 0%;
+
+
+}
+
+.grid_services button{
+  text-align:center;
+  font-size: 25px;
+  
+  font-stretch:expanded;
+  margin-top:3%;
+  margin-bottom:4%;
+  margin-left: 120px;
+  color: white;
+  background-color: coral;
+
+
+}
+
+.grid_services button a{
+  text-decoration:none;
+  color:coral
+    font-weight:800;
+}
+
+
+
+.grid_services:hover{
+  border:1px solid coral; 
+}
+
+
+
+/* our menu */
+
+.footer{
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+
+}
+
+
+
+.footer .container{
+  background-color:gray;
+  
+    width: 101%;
+    height: 260px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .containerX{
+    width: 25%;
+    height: 100%;
+  background-color: ;
+     
+}
+
+.containerX h2{
+  
+    color: coral;
+    font-size: 27px;
+    font-family:italic, Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 35px;
+
+}
+.containerX h3{
+    color:white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 8px;
+    
+  
+
+    
+}
+.containerX h3 a{
+    color:white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 30px;
+     text-decoration:none;
+  margin-top: 30px;
+  color:white;
+  transition:0.5s all;
+  -webkit-transition:0.5s all;
+  -moz-transition:0.5s all;
+  -o-transition:0.5s all;
+  -ms-transition:0.5s all;
+  border-radius:3px;
+  -noz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding:0% 5%;
+  margin-bottom: 100px;
+  
+    
+}
+.containerX h3 a:hover{
+  color:#6b3e26;
+  background-color:coral;
+}
+.con1 .social{
+
+    width: 100%;
+    height: 30px;
+    margin-top: 50px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1000px;
+    
+}
+
+
+.social .soc{
+    width: 20%;
+    height: 100%;
+    background-color: ;
+    margin-left: 30px;
+    margin-bottom: 10px;
+
+}
+
+.facebook{
+    background-image: url("image/i1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.twitter{
+    background-image: url("image/i2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.instagram{
+    background-image: url("image/i3.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pinterest{
+    background-image: url("image/i4.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.linkedin{
+    background-image: url("image/i5.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.con3 img{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.con4 h3{
+    color:coral;
+    text-align: ;
+    margin-right: 30px; 
+}
+
+
+
+
+
+
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Pizza Maestro</title>
+    <link rel="stylesheet" type="text/css" href="cart.css">
+
+
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+   
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+           
+            <img src="image/pizzaMtransparent.png" alt="Welcome to Pizza Maestro" href="index.html" />
+            <h1>PIZZA MAESTRO</h1>
+           
+
+           <div><a href="cart/cart.html">
+            <img src="image/checkout.png" alt="Welcome to Pizza Maestro" href="index.html"
+             style="float: right; width: 80px; height: 50px; margin-right:30px; margin-bottom:50px;"  /></a>
+            </div>
+           
+            </div>
+        </div>
+        <!-------------------------------------//header---------------------------> 
+<nav>
+            <!-------------------------------------//Navigation bar---------------------------> 
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            
+            <li>    
+            <a href="Menu.html">MENU</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">LOGIN </a></li>
+         </ul>
+</nav>
+<!-------------------------------------//navigatoin bar end---------------------------> 
+
+
+    
+        <h1 style="text-align: center;color: coral; margin-top:20px;">ENTER YOUR SHOPPING HERE</h1>
+    
+        <section class="container content-section">
+            
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">special Burger</span>
+                    <img class="shop-item-image" src="imagemenu/b1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                    <h3 style="font-size: 25px; color: coral;">Create your own Flavour</h3>
+                    <select>size
+                        <p>Size</p>
+                        <option style="color: coral;">Size</option>
+                        <option style="color: coral;">8 Inch</option>
+                          <option style="color: coral;">15 Inch </option>
+                            <option style="color: coral;">20 Inch </option>
+                    </select><br>
+                    <select>Crust
+                        <p>Crust</p>
+                        <option style="color: coral;">Crust</option>
+                        <option style="color: coral;">Extra-Thin </option>
+                          <option style="color: coral;">Thin </option>
+                            <option style="color: coral;">Thick</option>
+                    </select><br>
+                    
+                    <select>sauce 
+                        <option style="color: coral;">Sauce</option>
+                        <option style="color: coral;">Spicy </option>
+                          <option style="color: coral;">Sweet</option>
+                            <option style="color: coral;"> Sour</option> 
+                    </select><br>
+                <select>Cheese
+                    <p> Cheese </p>
+                    <option style="color: coral;">Cheese</option>
+                        <option style="color: coral;">Cheese Small </option>
+                          <option style="color: coral;">cheese Large </option>
+                            <option style="color: coral;">Cheese Extra-large</option>
+                    </select><br><br>
+             <input type="checkbox" name="Pepproni" class="Pepproni" style="">peperoni 
+           <input type="checkbox" name="Pepproni" class="">Green Onions
+           <input type="checkbox" name="Pepproni" class="">Pineapples
+           <input type="checkbox" name="Pepproni" class="">Garlic Sauce
+            
+                   
+
+                   <button style=" color: white;
+
+background-color: coral;
+border: none;
+border-radius: .3em;
+font-weight: bold;
+margin-left: 250px; font-size: 16px;">Add Additional Flavours</button>
+
+
+            </div>
+           
+    </section>
+    <section class="container content-section">
+        
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM DISCRIPTION</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total Amount</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        <button style=" color: white;
+
+background-color:coral;
+border:3px solid coral;
+border-radius:.2em;
+font-weight: bold;
+margin-left: 160px;
+  font-size: 22px;"><a href="order.html" style="color: white">
+Proceed</a></button>
+    </section>
+    
+    <script>
+        if (document.readyState == 'loading') {
+document.addEventListener('DOMContentLoaded', ready)
+} else {
+ready()
+}
+
+function ready() {
+var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+for (var i = 0; i < removeCartItemButtons.length; i++) {
+    var button = removeCartItemButtons[i]
+    button.addEventListener('click', removeCartItem)
+}
+
+var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+for (var i = 0; i < quantityInputs.length; i++) {
+    var input = quantityInputs[i]
+    input.addEventListener('change', quantityChanged)
+}
+
+var addToCartButtons = document.getElementsByClassName('shop-item-button')
+for (var i = 0; i < addToCartButtons.length; i++) {
+    var button = addToCartButtons[i]
+    button.addEventListener('click', addToCartClicked)
+}
+
+document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() {
+alert('Thank you for your purchase')
+var cartItems = document.getElementsByClassName('cart-items')[0]
+while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild)
+}
+updateCartTotal()
+}
+
+function removeCartItem(event) {
+var buttonClicked = event.target
+buttonClicked.parentElement.parentElement.remove()
+updateCartTotal()
+}
+
+function quantityChanged(event) {
+var input = event.target
+if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1
+}
+updateCartTotal()
+}
+
+function addToCartClicked(event) {
+var button = event.target
+var shopItem = button.parentElement.parentElement
+var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+addItemToCart(title, price, imageSrc)
+updateCartTotal()
+}
+
+function addItemToCart(title, price, imageSrc) {
+var cartRow = document.createElement('div')
+cartRow.classList.add('cart-row')
+var cartItems = document.getElementsByClassName('cart-items')[0]
+var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+for (var i = 0; i < cartItemNames.length; i++) {
+    if (cartItemNames[i].innerText == title) {
+        alert('This item is already added to the cart')
+        return
+    }
+}
+var cartRowContents = `
+    <div class="cart-item cart-column">
+        <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+        <span class="cart-item-title">${title}</span>
+    </div>
+    <span class="cart-price cart-column">${price}</span>
+    <div class="cart-quantity cart-column">
+        <input class="cart-quantity-input" type="number" value="1">
+        <button class="btn btn-danger" type="button">REMOVE</button>
+    </div>`
+cartRow.innerHTML = cartRowContents
+cartItems.append(cartRow)
+cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function updateCartTotal() {
+var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+var total = 0
+for (var i = 0; i < cartRows.length; i++) {
+    var cartRow = cartRows[i]
+    var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+    var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var quantity = quantityElement.value
+    total = total + (price * quantity)
+}
+total = Math.round(total * 100) / 100
+document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+    </script>
+     <!-------------------------------------//footer --------------------------> 
+
+<div class="footer">
+
+    <div class="container">
+        <div class="containerX con1">
+            <h2 style="font-size: 30px;">About us</h2>
+
+            <h3><a href="#">Marketing</a></h3>
+            <h3><a href="#">Analytics</a></h3>
+            <h3><a href="#">Inside</a></h3>
+            <h3><a href="#">Commerce</a></h3>
+
+
+            <hr style="width: 400%; margin-top: 40px;background-color: white; ">
+
+             <div class="social">
+                <div class="soc facebook"></div>
+                <div class="soc twitter"></div>
+                <div class="soc instagram"></div>
+                <div class="soc pinterest"></div> 
+                <div class="soc linkedin"></div> 
+
+            
+          
+      </div>
+        </div>
+        <div class="containerX con2">
+            <h2 style="font-size: 30px;">Company</h2>
+            <h3 style=><a href="#" >Blog</a></h3>
+            <h3><a href="#">Jobs</a></h3>
+            <h3><a href="#">Press</a></h3>
+            <h3><a href="#">Partners</a></h3>
+
+
+            <h4 style="margin-top: 60px ;margin-left: 2px;  color: coral;" > 
+             <pre style="color: white; font-family:sans-serif;">  © 2020 Pizza MAESTRO,Inc.All Rights Reserved.</pre></h4>
+        </div>
+       
+        <div class="containerX con4">
+            <h2 style="font-size: 30px">Legal</h2>
+           
+            <h3><a href="#">Privacy</a></h3>
+            
+            <h3><a href="#">Cliam</a></h3>
+            <h3><a href="#">Term</a></h3>
+        </div>
+        
+             
+        <div class="containerX con3">
+            <h2 style="font-size: 30px">Contact Us</h2>
+            <h3 style="color:white"><img src="image/loc.png" alt="">7 Maestro St Winnnipeg, MB. CA</h3>
+            <h3 style="color:white"><img src="image/icons8_phone_50px.png" alt="">+(204)-999-999</h3>
+            <h3 style="color:white"><img src="image/mail.png" alt="">PizzaMaestro@gmail.com</h3>
+        </div>
+        
+    </div>
+</div>
+    
+</body>
+</html>

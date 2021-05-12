@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+</head>
+<body>
+	<!-------------------------------------//header---------------------------> 
+	 <div class="header-container">
+        <div class="header">
+           
+            <img src="image/pizzaMtransparent.png" alt="Welcome to Pizza Maestro" href="index.html" />
+            <h1>PIZZA MAESTRO</h1>
+           
+
+           <div><a href="cart/cart.html">
+            <img src="image/checkout.png" alt="Welcome to Pizza Maestro" href="index.html"
+             style="float: right; width: 60px; height: 40px; margin-right:30px;"  /></a>
+            </div>
+           
+            </div>
+        </div>
+        <!-------------------------------------//header---------------------------> 
+<nav>
+	        <!-------------------------------------//Navigation bar---------------------------> 
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			
+			<li>	
+			<a href="Menu.html">MENU</a></li>
+			<li><a href="about.html">ABOUT US</a></li>
+			<li><a href="login.html">LOGIN </a></li>
+		 </ul>
+</nav>
+<!-------------------------------------//Navigation end -------------------------> 
+
+
+<!-------------------------------------//About us -------------------------> 
+
+
+   
+    <div id="services">
+        <h2 id="label_services"><a href="about.html">ABOUT US</a></h2>
+        <div id="content_services">
+          <div class="grid_services">
+            <div><a href="about.html"><img src="image/a1.jpg" alt="Millz"></a></div>
+            <h3><a href="#">Millz</a></h3>
+           
+          </div>
+          <div class="grid_services">
+            <div><a href="about.html"><img src="image/a2.jpg" alt="Kenele"></a></div>
+            <h3><a href="#">Kenele</a></h3>
+          
+          </div>
+            
+          <div class="grid_services">
+            <div><a href="about.html"><img src="image/a3.jpg" alt="Raj"></a></div>
+            <h3><a href="#">Raj</a></h3>
+           
+          </div>
+         
+      </div>
+     <!-------------------------------------//about us end--------------------------->  
+
+
+
+
+
+
+
+            <!-------------------------------------//FAQ---------------------------> 
+
+<section class="accordion">
+    <style >
+        h1 {
+  font-size: 50px;
+  text-transform: none;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-bottom: 0;
+  text-align: center;
+  color: coral;
+}
+
+
+p {
+  font-family: 'Source Sans Pro', sans-serif, arial;
+  text-transform: none;
+  color: black;
+}
+
+.material-icons {
+  color: coral;
+
+}
+
+.accordion {
+  background:white;
+  display: block;
+  
+  width: 100%;
+
+  margin: px auto auto auto;
+  border-top: 2px solid white;
+  
+}
+
+#section1 {
+  margin-top: 0;
+}
+
+#section1, #section2, #section3 {
+  padding: 20px;
+}
+
+.description {
+  display: none;
+  color:coral;
+}
+
+.active + .description {
+  display: block;
+}
+
+.title:nth-child(2), .title:nth-child(6){
+    background: #64B6B1;
+}
+
+.title:nth-child(4) {
+    background: #d7e8e4;
+}
+
+div.title::before {
+  content: url("./icons/ic_add_circle_outline_black_24px.svg");
+}
+
+div.active::before {
+  display: inline-block;
+  content: url("./icons/ic_remove_circle_outline_black_24px.svg");
+}
+
+    </style>
+      <h1>FAQS</h1>
+
+      <div class="title" id="section1">
+        <span class="material-icons"></span>
+    <h3 style="color: coral;"> Evans</h3>
+      </div>
+      <div class="description">
+        <p> Evans is a 4th year computer science student</p>
+      </div>
+
+
+      <div class="title" id="section2">
+        <span class="material-icons"></span>
+     <h3 style="color: coral;">Milz</h3>
+      </div>
+      <div class="description">
+        <p> Milz is a 2 Computer Science student.  
+
+ </p>
+      </div>
+
+      <div class="title" id="section3">
+          <span class="material-icons"></span>
+     <h3 style="color: coral;">  Raj</h3>
+      </div>
+      <div class="description">
+        <p>Raj is a 3rd year computer science student </p>
+      </div>
+    </section>
+<script>
+    // A function that adds and remove the class "active" on the section you click on.
+function toggle() {
+  this.classList.toggle("active")
+}
+
+// Selects and HTML element, and calls a function which will be executed when the element is clicked.
+document.getElementById("section1").onclick = toggle
+document.getElementById("section2").onclick = toggle
+document.getElementById("section3").onclick = toggle
+
+</script>
+
+   
+
+            <!-------------------------------------//FAQ---------------------------> 
+
+
+  <!-------------------------------------//footer --------------------------> 
+    
+ <div class="footer">
+
+        <div class="container">
+            <div class="containerX con1">
+                <h2 style="font-size: 30px;">About us</h2>
+
+                <h3><a href="#">Marketing</a></h3>
+                <h3><a href="#">Analytics</a></h3>
+                <h3><a href="#">Inside</a></h3>
+                <h3><a href="#">Commerce</a></h3>
+
+
+                <hr style="width: 400%; margin-top: 40px;background-color: white; ">
+
+                 <div class="social">
+                    <div class="soc facebook"></div>
+                    <div class="soc twitter"></div>
+                    <div class="soc instagram"></div>
+                    <div class="soc pinterest"></div> 
+                    <div class="soc linkedin"></div> 
+
+                
+              
+          </div>
+            </div>
+            <div class="containerX con2">
+                <h2 style="font-size: 30px;">Company</h2>
+                <h3 style=><a href="#" >Blog</a></h3>
+                <h3><a href="#">Jobs</a></h3>
+                <h3><a href="#">Press</a></h3>
+                <h3><a href="#">Partners</a></h3>
+
+
+                <h4 style="margin-top: 60px ;margin-left: 2px;  color: coral;" > 
+                 <pre style="color: white; font-family:sans-serif;">  © 2020 Pizza MAESTRO,Inc.All Rights Reserved.</pre></h4>
+            </div>
+           
+            <div class="containerX con4">
+                <h2 style="font-size: 30px">Legal</h2>
+               
+                <h3><a href="#">Privacy</a></h3>
+                
+                <h3><a href="#">Cliam</a></h3>
+                <h3><a href="#">Term</a></h3>
+            </div>
+            
+               
+            <div class="containerX con3">
+              <h2 style="font-size: 30px">Contact Us</h2>
+              <h3 style="color:white"><img src="image/loc.png" alt="">7 Maestro St Winnnipeg, MB. CA</h3>
+              <h3 style="color:white"><img src="image/icons8_phone_50px.png" alt="">+(204)-999-999</h3>
+              <h3 style="color:white"><img src="image/mail.png" alt="">PizzaMaestro@gmail.com</h3>
+          </div>
+            
+        </div>
+    </div>
+        
+
+<!-------------------------------------//footer end---------------------------> 
+
+
+
+
+
+
+</body>
+</html>
